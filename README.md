@@ -9,8 +9,8 @@
 
 << [link to demo presentation slides](#) >>
 
-### Team: << team name >>
-#### << Team Members >>
+### Team: Python Pirates
+#### Maya Anand, John Depetro, Michael Ott
 
 ***
 
