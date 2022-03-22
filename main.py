@@ -7,7 +7,7 @@ def main():
 
   for i in range(4):
     num = int(input("Input an integer: "))
-    mylist.append(i)
+    mylist.append(num)
 
   for i in range(4):
     print("mylist[" + str(i) + "] = " + str(mylist[i]))
