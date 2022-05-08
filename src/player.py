@@ -1,22 +1,25 @@
 class Player:
-  def __init__(self, name="", money=0):
-    self.name = name
-    self.money = money
+  def __init__(self):
     self.cards = []
-
-  def __str__(self):
-    return f"Player: {self.name}\n Money: ${self.money}"
 
   def addCard2Hand(self, deck = None):
     card = deck.deck.pop(0)
     self.cards.append(card)
+    if len(self.cards) >= 3:
+      self.printHand()
   
   def printHand(self):
     print("============Player's Hand============")
     for card in self.cards:
       if card != None:
         card.printCard()
-  
+    print('')
+        
+  def clearHand(self):
+    if self.cards:
+      for _ in range(len(self.cards)):
+        self.cards.pop(0)
+      
   def handTotal(self):
     tot = [0,0]
 

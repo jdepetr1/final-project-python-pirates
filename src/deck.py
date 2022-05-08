@@ -1,4 +1,4 @@
-import Card
+from src import card
 import random
 
 class Deck:
@@ -14,7 +14,7 @@ class Deck:
     self.deck = []
     for _ in range(2):
       for value in range(1,53):
-        card0 = Card.Card(Deck._NAMES_[value% Deck._NUM_CARDS_PER_SUIT_], Deck._SUITS_[(value//Deck._NUM_CARDS_PER_SUIT_)-1])
+        card0 = card.Card(Deck._NAMES_[value% Deck._NUM_CARDS_PER_SUIT_], Deck._SUITS_[(value//Deck._NUM_CARDS_PER_SUIT_)-1])
         self.deck.append(card0)
 
   def shuffle(self):
@@ -27,5 +27,5 @@ class Deck:
     return "Deck of "+str(len(self))+" cards. "+str(Deck._NUM_CARDS_PER_SUIT_)+" cards per each of the " + str(Deck._NUM_SUITS_)+" suits."
     
   def printDeck(self):
-    for card in self.deck:
-      card.printCard()
+    for ecard in self.deck:
+      ecard.printCard()

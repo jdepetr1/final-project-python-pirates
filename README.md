@@ -10,13 +10,13 @@
 << [link to demo presentation slides](#) >>
 
 ### Team: Python Pirates
-#### Maya Anand, John Depetro, Michael Ott
+#### John Depetro, Maya Anand, Michael Ott
 
 ***
 
 ## Project Description *(Software Lead)*
 
-<< Give an overview of your project >>
+  Variation on the classic card game, Black-Jack. In the game we made, you play against the dealer in attempts to get cards that totla as close to 31 as you can get without going over. All the same rules as original Black-Jack except there is no 'splitting' option. There is also the added option of, after doubling down, you can quad-up and oct-up to 8x your original bet. The dealer automatically stops adding cards whenever there cards total at least 27.
 
 ***    
 
@@ -35,16 +35,29 @@
 ## Program Design *(Backend Specialist)*
 
 * Non-Standard libraries
-    * << You should have a list of any additional libraries or modules used (pygame, request) beyond non-standard python. >>
-    * For each additional module you should include
-        * url for the module documentation
+    * pygame module
+        * https://www.pygame.org/docs/
+        * creates screen and al sprites on the screen, giving users an interface other than the console to play our game
+    * random module
+        * https://docs.python.org/3/library/random.html
         * a short description of the module
 * Class Interface Design
-    * << A simple drawing that shows the class relationships in your code (see below for an example). >>
-        * ![class diagram](assets/JBJ_ProgramDesign.jpg)
-    * This does not need to be overly detailed, but should show how your code fits into the Model/View/Controller paradigm.
+![class diagram](assets/JBJ_ProgramDesign.jpg)
 * Classes
-    * << You should have a list of each of your classes with a description. >>
+    * Card
+      * model class for creating a card with a valkue and suit, along with a pygame surface of the oject
+    * Deck
+      * Contains a list of 104 card objects (2 full decks of playing cards) to be helpful when implementing the controller
+    * Player
+      * Contains the card objects in the user's hand. Contains functions to add cards to the hand
+    * Dealer
+      * Subclass of player that keeps track of the dealer's hand
+    * Background
+      * Loads the background image for the program
+    * Button
+      * Assists the creation of all clickable button sprites for the program
+    * Rules
+      * Loads the picture of the rules for the game
 
 ## Project Structure *(Software Lead)*
 
@@ -52,11 +65,23 @@ The Project is broken down into the following file structure:
 
 * main.py
 * src
-    * <all of your python files should go here>
+    * background.py
+    * button.py
+    * card.py
+    * controller.py
+    * dealer.py
+    * deck.py
+    * player.py
+    * rules.py
 * assets
-    * <all of your media, i.e. images, font files, etc, should go here)
+    * background.png
+    * class_diagram.jpg
+    * JBJ_Playing.jpg
+    * JBJ_ProgramDesign.jpg
+    * JBJ_StartScreen.jpg
+    * rules.png
 * etc
-    * <This is a catch all folder for things that are not part of your project, but you want to keep with your project. Your demo video should go here.>
+  
 
 ***
 
@@ -64,15 +89,15 @@ The Project is broken down into the following file structure:
 
    * You must outline the team member roles and who was responsible for each class/method, both individual and collaborative.
 
-### Software Lead - << name >>
+### Software Lead - John 
 
 << Worked as integration specialist by... >>
 
-### Front End Specialist - << name >>
+### Front End Specialist - Michael
 
 << Front-end lead conducted significant research on... >>
 
-### Back End Specialist - << name >>
+### Back End Specialist - Maya
 
 << The back end specialist... >>
 
@@ -84,7 +109,15 @@ The Project is broken down into the following file structure:
 ## ATP
 
 | Step                  | Procedure     | Expected Results  | Actual Results |
-| ----------------------|:-------------:| -----------------:| -------------- |
-|  1  | Run Counter Program  | GUI window appears with count = 0  |          |
-|  2  | click count button  | display changes to count = 1 |                 |
-etc...
+| :----------------------:|:-------------| :-----------------| -------------- |
+|  1  | Click 'Run' button  | GUI window appears in menu screen  |    Works     |
+|  2  | Click 'Rules' button  | Rules of Jack-Black-Jack are displayed (Click rules again to go back to menu) |         Works        |
+|  3  | Use 4 different CYAN colored buttons to change bet size  | Bet will change according to buttons clicked |        Works         |
+|  4  | Click 'Deal' button  | 3 cards added to player's and dealer's hand. 2 of dealer's cards are hidden |        Works         |
+|  5A  | Click 'Hit' button  | Adds additional card to players hand, disables 'Double' option |          Works        |
+|  5B  | Click 'Double' button  | Doubles the original bet of the current hand, displays 'Quad-Up' button, adds card to player's hand, disables 'Hit' option |          Works        |
+|  6  | Click 'Quad-Up' button  | Multiplies the original bet of the current hand by 4, displays 'Oct-Up' button, adds card to player's hand  |           Works       |
+|  7  | Click 'Oct-Up' button  | Multiplies the original bet of the current hand by 8, adds card to player's hand  |           Works       |
+|  8  | Click 'Stand' button  | Reveals all of dealer's cards and brings game to 'SHOWDOWN' state. Dealer logic works itself out and decides if player Loses, Wins, or Ties. |          Works        |
+|  9  | Wait until returned to Betting screen  | User will be able to play click deal again to start a new hand |       Works           |
+|  10 | Click 'Cashout' button  | Game exits, game window closes, and a text file is created with player's total money from the table in it |       Works           |

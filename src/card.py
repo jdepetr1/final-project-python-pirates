@@ -13,9 +13,24 @@ class Card(pygame.sprite.Sprite):
       self.value = [10,10]
     else:
       self.value = [int(name), int(name)]
+
+    if suit[0] == "H":
+      self.t_color = (255,0,0)
+    elif suit[0] == "C":
+      self.t_color = (0,150,0)
+    elif suit[0] == "S":
+      self.t_color = (0,0,0)
+    else:
+      self.t_color = (0,0,255)
     
-    pygame.image.load('assets/blank_card.png').convert_alpha()
-    self.rect = self.image.get_rect()  # rectangle
-    self.rect.inflate_ip(-25, -25)
-    self.rect.x = 10
-    self.rect.y = 10
+    myfont = pygame.font.SysFont(None, 70)
+    if self.name[0] == '1':
+      self.message = myfont.render(f"{self.name}", True, self.t_color, (255,255,255))
+    else:
+      self.message = myfont.render(f"{self.name[0]}", True, self.t_color, (255,255,255))
+
+  def __str__(self):
+    return f"{str(self.name)} of {str(self.suit)}"
+
+  def printCard(self):
+    print(str(self))
