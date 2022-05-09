@@ -71,6 +71,7 @@ class Controller:
     '''
     self.bet = 10
     self.deck = deck.Deck()
+    print("-----------------New Hand-----------------")
       #event loop
     while self.state == "PREGAME":
       self.screen.blit(self.bg, (0, 0))
@@ -134,8 +135,11 @@ class Controller:
       self.dealer.addCard2Hand(self.deck)
     p_total = self.player.handTotal()
     d_total = self.dealer.handTotal()
-    if (p_total[1] == 31 and len(self.player.cards) == 3) or (d_total[1] == 31 and len(self.dealer.cards) == 3):
+    self.dealer.printHand()
+    if (p_total[1] == 31 and len(self.player.cards) == 3) or (d_total[1] == 31 and len(self.dealer.cards) == 3) or (p_total[0] > 31):
       self.state = "SHOWDOWN"
+      
+      
     HIT = 0
     DOUBLE = 0
     QUAD = 0
@@ -236,6 +240,7 @@ class Controller:
 
       return: None
     '''
+    
     while self.state == "SHOWDOWN":
       self.screen.blit(self.bg, (0, 0))
       for i in range(0, len(self.player.cards)):

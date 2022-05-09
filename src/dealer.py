@@ -16,7 +16,11 @@ class Dealer(player.Player):
 
   def printHand(self):
     print("============Dealer's Hand============")
-    for card in self.cards:
-      if card != None:
-        print(str(card))
-    print('')
+    if len(self.cards) == 3:
+      print(f"***************\n***************\n{str(self.cards[2])}")
+      print('')
+    else:
+      for card in self.cards:
+        if card != None:
+          print(str(card))
+      print('')
