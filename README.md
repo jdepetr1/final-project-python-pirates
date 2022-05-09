@@ -16,7 +16,7 @@
 
 ## Project Description *(Software Lead)*
 
-  Variation on the classic card game, Black-Jack. In the game we made, you play against the dealer in attempts to get cards that totla as close to 31 as you can get without going over. All the same rules as original Black-Jack except there is no 'splitting' option. There is also the added option of, after doubling down, you can quad-up and oct-up to 8x your original bet. The dealer automatically stops adding cards whenever there cards total at least 27.
+  Variation on the classic card game, Black-Jack. In the game we made, you play against the dealer in attempts to get cards that total as close to 31 as you can get without going over. All the same rules as original Black-Jack except there is no 'splitting' option. There is also the added option of, after doubling down, you can quad-up and oct-up to 4x or 8x your original bet. The dealer automatically stops adding cards whenever their cards total at least 27.
 
 ***    
 
@@ -110,14 +110,17 @@ The Project is broken down into the following file structure:
 
 | Step                  | Procedure     | Expected Results  | Actual Results |
 | :----------------------:|:-------------| :-----------------| -------------- |
-|  1  | Click 'Run' button  | GUI window appears in menu screen  |    Works     |
-|  2  | Click 'Rules' button  | Rules of Jack-Black-Jack are displayed (Click rules again to go back to menu) |         Works        |
-|  3  | Use 4 different CYAN colored buttons to change bet size  | Bet will change according to buttons clicked |        Works         |
-|  4  | Click 'Deal' button  | 3 cards added to player's and dealer's hand. 2 of dealer's cards are hidden |        Works         |
-|  5A  | Click 'Hit' button  | Adds additional card to players hand, disables 'Double' option |          Works        |
-|  5B  | Click 'Double' button  | Doubles the original bet of the current hand, displays 'Quad-Up' button, adds card to player's hand, disables 'Hit' option |          Works        |
-|  6  | Click 'Quad-Up' button  | Multiplies the original bet of the current hand by 4, displays 'Oct-Up' button, adds card to player's hand  |           Works       |
-|  7  | Click 'Oct-Up' button  | Multiplies the original bet of the current hand by 8, adds card to player's hand  |           Works       |
-|  8  | Click 'Stand' button  | Reveals all of dealer's cards and brings game to 'SHOWDOWN' state. Dealer logic works itself out and decides if player Loses, Wins, or Ties. |          Works        |
-|  9  | Wait until returned to Betting screen  | User will be able to play click deal again to start a new hand |       Works           |
-|  10 | Click 'Cashout' button  | Game exits, game window closes, and a text file is created with player's total money from the table in it |       Works           |
+|  1  | Click 'Run' button  | GUI window appears in menu screen  |         |
+|  2  | Click 'Rules' button  | Rules of Jack-Black-Jack are displayed (Click rules again to go back to menu) |                 |
+|  3A  | Click '+100' button | Bet will go up by 100|                 |
+|  3B  | Click '+10' button  | Bet will go up by 10|                 |
+|  3C  | Click '-10' button  | Bet will go down by 10 (Unless bet were to go below the minimum bet of 10. Bet will only go as low as 10)|                 |
+|  3D  | Click '-100' button  | Bet will go down by 100 (Unless bet were to go below the minimum bet of 10. Bet will only go as low as 10)|                |
+|  4  | Click 'Deal' button  | 3 cards added to player's and dealer's hand. 2 of dealer's cards are hidden |                 |
+|  5A  | Click 'Hit' button  | Adds additional card to players hand, disables 'Double' option |                  |
+|  5B  | Click 'Double' button  | Doubles the original bet of the current hand, displays 'Quad-Up' button, adds card to player's hand, disables 'Hit' option |                  |
+|  6  | Click 'Quad-Up' button  | Multiplies the original bet of the current hand by 4, displays 'Oct-Up' button, adds card to player's hand  |                  |
+|  7  | Click 'Oct-Up' button  | Multiplies the original bet of the current hand by 8, adds card to player's hand  |                  |
+|  8  | Click 'Stand' button  | Reveals all of dealer's cards and brings game to 'SHOWDOWN' state. Dealer logic works itself out and decides if player Loses, Wins, or Ties. |                  |
+|  9  | Wait until returned to Betting screen  | User will be able to play click deal again to start a new hand |                  |
+|  10 | Click 'Cashout' button  | Game exits, game window closes, and a text file is created with player's total money from the table in it |                  |
