@@ -1,11 +1,10 @@
-:warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 # CS110 Project Proposal
 # Jack-Black-Jack
 ## CS 110 Final Project
 ### Spring, 2022
 ### [Assignment Description](https://docs.google.com/document/d/1H4R6yLL7som1lglyXWZ04RvTp_RvRFCCBn6sqv-82ps/edit#)
 
-<< [repl](#) >>
+https://replit.com/@Maya-EE1/final-project-python-pirates
 
 << [link to demo presentation slides](#) >>
 
@@ -22,13 +21,22 @@
 
 ## User Interface Design *(Front End Specialist)*
 
-* << A wireframe or drawing of the user interface concept along with a short description of the interface. You should have one for each screen in your program. >>
-    * For example, if your program has a start screen, game screen, and game over screen, you should include a wireframe / screenshot / drawing of each one and a short description of the components
 * Start Screen
-![class diagram](assets/JBJ_StartScreen.jpg)
+  * Draft
+  ![class diagram](assets/JBJ_StartScreen_draft.png)
+  * Final
+  ![class diagram](assets/JBJ_StartScreen.jpg)
 * Playing Screen
-![class diagram](assets/JBJ_Playing.jpg)
-* << You should also have a screenshot of each screen for your final GUI >>
+  * Draft
+  ![class diagram](assets/JBJ_Playing_draft.png)
+  * Final
+  ![class diagram](assets/JBJ_Playing.jpg)
+* Win Screen
+  ![class diagram](assets/JBJ_Win.JPG)
+* Loss Screen
+![class diagram](assets/JBJ_Lose.JPG)
+* Rules Screen
+![class diagram](assets/JBJ_Rules_Screen.JPG)
 
 ***        
 
@@ -45,7 +53,7 @@
 ![class diagram](assets/JBJ_ProgramDesign.jpg)
 * Classes
     * Card
-      * model class for creating a card with a valkue and suit, along with a pygame surface of the oject
+      * model class for creating a card with a value and suit, along with a pygame surface of the oject
     * Deck
       * Contains a list of 104 card objects (2 full decks of playing cards) to be helpful when implementing the controller
     * Player
@@ -76,10 +84,15 @@ The Project is broken down into the following file structure:
 * assets
     * background.png
     * class_diagram.jpg
+    * JBJ_Lose.JPG
     * JBJ_Playing.jpg
+    * JBJ_Playing_draft.JPG
     * JBJ_ProgramDesign.jpg
+    * JBJ_Rules_Screen.JPG
+    * JBJ_Rules.JPG
+    * JBJ_StartScreen_draft.png
     * JBJ_StartScreen.jpg
-    * rules.png
+    * JBJ_Win.JPG
 * etc
   
 
@@ -91,20 +104,19 @@ The Project is broken down into the following file structure:
 
 ### Software Lead - John 
 
-<< Worked as integration specialist by... >>
+Responsible for card.py, deck.py, player.py, dealer.py, and the showdownloop() function that controls all dealer logic when deciding whether the player wins or loses (or ties).
 
 ### Front End Specialist - Michael
 
-<< Front-end lead conducted significant research on... >>
+Engineered button.py, rules.py and all GUI aspects of Jack-Black-Jack. Ensured adherence to MVC pattern and that the controller handles all events. Took screenshots of final GUI along with old drafts of the GUI
 
 ### Back End Specialist - Maya
 
-<< The back end specialist... >>
+Implemented button's appearance logic, along with with 
 
 ## Testing *(Software Lead)*
 
-* << Describe your testing strategy for your project. >>
-    * << Example >>
+* I wanted to test the program by simulating an average hand of Jack-Black-Jack (JBJ). Unfortunately, to test all of the possibilities, it will take at least 2 games, so I included branching paths in the ATP for the 2 possibilities. 
 
 ## ATP
 

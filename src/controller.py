@@ -211,6 +211,7 @@ class Controller:
     '''
     while self.state == "RULES":
       self.screen.blit(self.bg, (0, 0))
+      self.rules.image = pygame.transform.scale(self.rules.image, [self.width/1.5, self.height/1.5])
       self.screen.blit(self.rule.image, (self.width/8,self.height/10))
       self.screen.blit(self.rulesB.message, self.rulesB.pos)
       ev = pygame.event.get()
