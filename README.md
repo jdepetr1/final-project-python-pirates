@@ -50,7 +50,7 @@ https://replit.com/@Maya-EE1/final-project-python-pirates
         * https://docs.python.org/3/library/random.html
         * a short description of the module
 * Class Interface Design
-![class diagram](assets/JBJ_ProgramDesign.jpg)
+![class diagram](assets/JBJ_ProgramDesign.png)
 * Classes
     * Card
       * model class for creating a card with a value and suit, along with a pygame surface of the oject
@@ -112,7 +112,7 @@ Engineered button.py, rules.py and all GUI aspects of Jack-Black-Jack. Ensured a
 
 ### Back End Specialist - Maya
 
-Implemented button's appearance logic, along with with 
+Ensured the connection between controller class and all supporting classes. Made sure classes were able to work together to create the final product.
 
 ## Testing *(Software Lead)*
 
