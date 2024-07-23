@@ -8,18 +8,17 @@ https://replit.com/@Maya-EE1/final-project-python-pirates
 
 << [link to demo presentation slides](#) >>
 
-### Team: Python Pirates
-#### John Depetro, Maya Anand, Michael Ott
+#### John Depetro
 
 ***
 
-## Project Description *(Software Lead)*
+## Project Description
 
   Variation on the classic card game, Black-Jack. In the game we made, you play against the dealer in attempts to get cards that total as close to 31 as you can get without going over. All the same rules as original Black-Jack except there is no 'splitting' option. There is also the added option of, after doubling down, you can quad-up and oct-up to 4x or 8x your original bet. The dealer automatically stops adding cards whenever their cards total at least 27.
 
 ***    
 
-## User Interface Design *(Front End Specialist)*
+## User Interface Design
 
 * Start Screen
   * Draft
@@ -40,7 +39,7 @@ https://replit.com/@Maya-EE1/final-project-python-pirates
 
 ***        
 
-## Program Design *(Backend Specialist)*
+## Program Design
 
 * Non-Standard libraries
     * pygame module
@@ -67,7 +66,7 @@ https://replit.com/@Maya-EE1/final-project-python-pirates
     * Rules
       * Loads the picture of the rules for the game
 
-## Project Structure *(Software Lead)*
+## Project Structure
 
 The Project is broken down into the following file structure:
 
@@ -98,23 +97,17 @@ The Project is broken down into the following file structure:
 
 ***
 
-## Tasks and Responsibilities *(Software Lead)*
+## Tasks and Responsibilities
 
    * You must outline the team member roles and who was responsible for each class/method, both individual and collaborative.
 
 ### Software Lead - John 
 
 Responsible for card.py, deck.py, player.py, dealer.py, and the showdownloop() function that controls all dealer logic when deciding whether the player wins or loses (or ties).
-
-### Front End Specialist - Michael
-
-Engineered button.py, rules.py and all GUI aspects of Jack-Black-Jack. Ensured adherence to MVC pattern and that the controller handles all events. Took screenshots of final GUI along with old drafts of the GUI
-
-### Back End Specialist - Maya
-
+Engineered button.py, rules.py and all GUI aspects of Jack-Black-Jack. Ensured adherence to MVC pattern and that the controller handles all events. Took screenshots of final GUI along with old drafts of the GUI.
 Ensured the connection between controller class and all supporting classes. Made sure classes were able to work together to create the final product.
 
-## Testing *(Software Lead)*
+## Testing 
 
 * I wanted to test the program by simulating an average hand of Jack-Black-Jack (JBJ). Unfortunately, to test all of the possibilities, it will take at least 2 games, so I included branching paths in the ATP for the 2 possibilities. 
 
